@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "183003424846",
+    "firebase_url": "https://reptitracker.firebaseio.com",
+    "project_id": "reptitracker",
+    "storage_bucket": "reptitracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183003424846:android:3ad67045114fdf57",
+        "android_client_info": {
+          "package_name": "com.reptitracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183003424846-g41qb9515fhrtj3tbnc4897lr5qv26os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlnqOfm66TwDQM3yNOTZZsOxl9lDeJ6sU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183003424846-g41qb9515fhrtj3tbnc4897lr5qv26os.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
