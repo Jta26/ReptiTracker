@@ -8,7 +8,7 @@ Reptitracker is multiplatform app built with React-Native (Link) that assists re
 ###  Front-End
 * React-Native
 * React Navigation
-* Redux
+* Mobx
 ### Back-End
 * Firebase Authentication
 * Firebase Firestore
