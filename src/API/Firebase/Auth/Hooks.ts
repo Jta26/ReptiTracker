@@ -9,6 +9,19 @@ export const useAuth = () => {
     const navigation = useNavigation();
     const store = Store.useStore();
 
+    const SignInWithEmailAndPassword = async (email: string, password: string) => {
+        try {
+            const user = await firebase.auth().signInWithEmailAndPassword(email, password);
+            return user.user;
+        } catch (err) {
+            throw new Error(err.message);
+        }
+    };
+    
+    const SignOut = () => {
+        firebase.auth().signOut();
+    }
+
     useEffect(() => {
         auth.onAuthStateChanged((user) => {
             const userObj: IUser = {
@@ -22,11 +35,13 @@ export const useAuth = () => {
             }
             else {
                 store.set("user")(userObj);
-                navigation.navigate("Home");
+                navigation.navigate("Auth");
             }
         });
     }, []);
 
-
-
-}
+    return {
+        SignInWithEmailAndPassword,
+        SignOut,
+    };
+};

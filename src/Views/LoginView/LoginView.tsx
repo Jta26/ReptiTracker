@@ -5,8 +5,6 @@ import { Button, Input } from "../../Components/";
 import Store from "../../Store";
 import { IUser } from "../../Store/User/Types";
 
-import { SignInWithEmailAndPassword } from "../../API/Firebase/Auth";
-
 import styles from "./Style";
 
 import { useNavigation } from "react-navigation-hooks";
@@ -36,12 +34,7 @@ const LoginView = () => {
     };
     const handleLoginButtonPress = async () => {
         try {
-            const user = await SignInWithEmailAndPassword(email, password);
-            const userObj: IUser = {
-                uid: user.uid,
-                email: user.email,
-            };
-            store.set("user")(userObj);
+            auth.SignInWithEmailAndPassword(email, password);
         } catch(err) {
             setError(err.message);
         }
