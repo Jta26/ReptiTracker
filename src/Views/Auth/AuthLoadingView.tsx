@@ -17,7 +17,6 @@ const AuthLoadingView = () => {
     const uid = store.get("user").uid;
 
     useEffect(() => {
-
         Nav.navigate(uid ? "Main" : "Auth");
     }, [uid]);
 
