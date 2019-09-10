@@ -8,8 +8,6 @@ import Store from "../../Store";
 import { useNavigation } from "react-navigation-hooks";
 import { useAuth } from "../../API/Firebase/Auth/Hooks";
 
-
-
 const AuthLoadingView = () => {
     const Nav = useNavigation();
     const store = Store.useStore();

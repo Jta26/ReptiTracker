@@ -21,11 +21,7 @@ export const useAuth = () => {
             throw new Error(err.message);
         }
     };
-    
-    const SignInWithFacebook = async () => {
-        
-    }
-
+    // Other Sign In Methods (Facebook/google)
     const SignOut = () => {
         firebase.auth().signOut();
     };

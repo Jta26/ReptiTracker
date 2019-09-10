@@ -1,7 +1,7 @@
 import { StyleSheet, TextStyle, ViewStyle, StyleProp, Dimensions } from "react-native";
 import Colors from '../../Helpers/Colors';
 
-interface Style {
+interface IStyle {
     container: any;
     button: any;
     input: any;
@@ -11,12 +11,11 @@ interface Style {
     error: any;
 }
 const { width, height} = Dimensions.get('window');
-export default StyleSheet.create<Style>({
+export default StyleSheet.create<IStyle>({
     container: {
         padding: 20,
-        flex:1,
+        flex: 1,
         flexDirection: 'column',
-        
         alignContent: 'center',
     },
     title: {
@@ -41,7 +40,6 @@ export default StyleSheet.create<Style>({
 
     },
     button: {
-    
         padding: 10,
         backgroundColor: Colors.PrimaryColor,
         borderRadius: 20,
@@ -63,11 +61,9 @@ export default StyleSheet.create<Style>({
         textAlign: 'center',
         fontFamily: 'Roboto',
         fontSize: 15,
-        
     },
     error: {
         textAlign: 'left',
-        height: 40,
         marginLeft: 'auto',
         marginRight: 'auto', 
         color: Colors.ErrorColor

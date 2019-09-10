@@ -4,29 +4,28 @@ import {
     View,
 } from "react-native";
 
- 
-import { createStackNavigator, createAppContainer, createSwitchNavigator } from "react-navigation";
+import { createAppContainer, createStackNavigator, createSwitchNavigator } from "react-navigation";
 
 import AuthLoadingView from "./Views/Auth/AuthLoadingView";
 import LoginView from "./Views/LoginView/LoginView";
-import ReptileView from "./Views/ReptileView/ReptileView";
+import ReptilesView from "./Views/ReptilesView/ReptilesView";
 
 import Store from "./Store";
 
 const AuthNav = createStackNavigator(
     {
-        Login: LoginView
+        Login: LoginView,
     },
     {
         initialRouteName: "Login",
-        headerMode: 'none',
+        headerMode: "none",
     },
 );
 
 const MainNav = createStackNavigator(
     {
         Main: {
-            screen: ReptileView,
+            screen: ReptilesView,
         },
     },
     {
@@ -53,6 +52,5 @@ const App = () => {
         </Store.Container>
     );
 };
-
 
 export default App;
