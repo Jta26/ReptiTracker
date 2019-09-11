@@ -7,10 +7,12 @@ import { Reptile } from "./Reptile/Reptile";
 interface State {
     user: IUser;
     reptileList: Reptile[];
+    selectedReptile: Reptile | null,
 }
 const initialState: State = {
     user: initialUser,
     reptileList: initialReptileList,
+    selectedReptile: null,
 };
 
 export default createConnectedStore(initialState);

@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, View, Text } from "react-native";
 import Styles from "./style";
 interface IButtonProps {
-    onPress: () => void;
+    onPress?: () => void;
 }
 const Button: React.FC<IButtonProps> = (props) => {
 

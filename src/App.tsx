@@ -11,6 +11,7 @@ import LoginView from "./Views/LoginView/LoginView";
 import ReptilesView from "./Views/ReptilesView/ReptilesView";
 
 import Store from "./Store";
+import ReptileDetailsView from "./Views/ReptileDetailsView/ReptileDetailsView";
 
 const AuthNav = createStackNavigator(
     {
@@ -27,6 +28,9 @@ const MainNav = createStackNavigator(
         Main: {
             screen: ReptilesView,
         },
+        ReptileDetails: {
+            screen: ReptileDetailsView,
+        }
     },
     {
         initialRouteName: "Main",

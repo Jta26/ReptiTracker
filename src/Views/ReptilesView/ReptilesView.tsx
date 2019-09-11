@@ -1,12 +1,12 @@
 import React, {Fragment} from "react";
 import { FlatList, ListRenderItem, Text, TouchableOpacity, View } from "react-native";
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
-import { useAuth } from "../../API/Firebase/Auth/Hooks";
 import { useNavigation } from "react-navigation-hooks";
+import { useAuth } from "../../API/Firebase/Auth/Hooks";
+import { ReptileCard } from "../../Components";
 import Colors from "../../Helpers/Colors";
 import Store from '../../Store';
 import { Reptile } from "../../Store/Reptile/Reptile";
-import { ReptileCard } from '../../Components/ReptileCard/ReptileCard';
 import styles from './Style';
 
 const ReptileView = () => {
@@ -19,12 +19,14 @@ const ReptileView = () => {
     const handleSignOut = () => {
         auth.SignOut();
     };
-    const handleReptilePress = () => {
-        nav.navigate("Reptile");
+    const handleReptilePress = (reptile: Reptile) => {
+        console.log(reptile);
+        store.set("selectedReptile")(reptile);
+        nav.navigate("ReptileDetails");
     };
     const renderReptile: ListRenderItem<Reptile> = ({ item }) => {
         return (
-                <ReptileCard img={item.Pictures} name={item.Name} type={item.Type} lastFedDate={item.LastFedDate} onReptilePress={handleReptilePress}/>
+                <ReptileCard reptile={item} onReptilePress={handleReptilePress}/>
         );
     };
     return (

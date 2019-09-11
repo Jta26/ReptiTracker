@@ -9,7 +9,6 @@ import {
     Easing,
     
 } from "react-native";
-import { ReptileCard } from "../ReptileCard/ReptileCard";
 import styles from "./Style";
 
 interface IImageSwipeProps {

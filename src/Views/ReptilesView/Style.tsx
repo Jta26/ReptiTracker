@@ -7,5 +7,5 @@ const windowWidth = Dimensions.get("screen").width;
 export default StyleSheet.create<IStyle>({
     cards: {
         flex: 1,
-    }
+    },
 });
