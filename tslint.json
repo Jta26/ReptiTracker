@@ -4,7 +4,7 @@
     ],
     "rules": {
       "ordered-imports": [
-        true
+        false
       ],
       "quotemark": [
         true,
@@ -23,12 +23,13 @@
         false
       ],
       "trailing-comma": [
-        true,
+        false,
         {
           "singleline": "never",
           "multiline": "always"
         }
       ],
+      "one-line": [false, "check-catch", "check-finally", "check-else"],
       "linebreak-style": [false, "CRLF"],
       "no-empty": false,
       "no-submodule-imports": false,
@@ -49,5 +50,6 @@
       "jsx-alignment": true,
       "jsx-no-bind": true,
       "jsx-no-lambda": true
+      
     }
   }

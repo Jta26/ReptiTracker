@@ -27,16 +27,17 @@ const LoginView = () => {
             Nav.navigate("Main");
         }
     });
-    const handleEmailChange = (email: string) => {
-        setEmail(email);
+    const handleEmailChange = (txtEmail: string) => {
+        setEmail(txtEmail);
     };
-    const handlePasswordChange = (password: string) => {
-        setPassword(password);
+    const handlePasswordChange = (txtPassword: string) => {
+        setPassword(txtPassword);
     };
     const handleLoginButtonPress = async () => {
         try {
             await auth.SignInWithEmailAndPassword(email, password);
-        } catch(err) {
+        }
+        catch (err) {
             setError(err.message);
         }
     };

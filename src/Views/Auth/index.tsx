@@ -22,8 +22,7 @@ const AuthLoadingView = () => {
         <View>
             <ActivityIndicator/>
         </View>
-    )
-
-}
+    );
+};
 
 export default AuthLoadingView;

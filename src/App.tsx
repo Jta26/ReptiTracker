@@ -6,12 +6,14 @@ import {
 
 import { createAppContainer, createStackNavigator, createSwitchNavigator } from "react-navigation";
 
-import AuthLoadingView from "./Views/Auth/AuthLoadingView";
-import LoginView from "./Views/LoginView/LoginView";
-import ReptilesView from "./Views/ReptilesView/ReptilesView";
+import {
+    AuthLoadingView,
+    LoginView,
+    ReptileDetailsView,
+    ReptilesView,
+} from "./Views";
 
 import Store from "./Store";
-import ReptileDetailsView from "./Views/ReptileDetailsView/ReptileDetailsView";
 
 const AuthNav = createStackNavigator(
     {
