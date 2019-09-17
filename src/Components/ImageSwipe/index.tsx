@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import {
     Image,
     View,
@@ -7,7 +7,6 @@ import {
     PanResponder,
     Dimensions,
     Easing,
-    
 } from "react-native";
 import styles from "./Style";
 
@@ -74,9 +73,12 @@ const ImageSwipe = (props: IImageSwipeProps) => {
         );
     }
     return (
-        <Animated.View style={[position.getLayout(), styles.container]} {...panResponder.panHandlers}>
-            {props.images.map(renderImg)}
-        </Animated.View>
+        <Fragment>
+            <Animated.View style={[position.getLayout(), styles.container]} {...panResponder.panHandlers}>
+                {props.images.map(renderImg)}
+            </Animated.View>
+            <Text style={styles.imgCount}>{imgIndex + 1} / {props.images.length}</Text>
+        </Fragment>
     );
 };
 

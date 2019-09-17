@@ -1,11 +1,11 @@
 import { StyleSheet, Dimensions } from "react-native";
+import Colors from "../../Helpers/Colors";
 
 interface IStyle {
     container: any;
     image: any;
+    imgCount: any;
 }
-
-const windowWidth = Dimensions.get("window").width;
 export default StyleSheet.create<IStyle>({
     container: {
         flex: 1,
@@ -17,4 +17,9 @@ export default StyleSheet.create<IStyle>({
         width: null,
         height: 275,
     },
+    imgCount: {
+        color: Colors.SecondaryTextColor,
+        textAlign: "right",
+        padding: 5,
+    }
 });
